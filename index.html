@@ -5,25 +5,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Pokedex</title>
-
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <header class="cabecalho">
-        <h1 class="cabecalho__titulo">Pokedex</h1>
+        <h1 class="cabecalho__titulo">Pokédex</h1>
     </header>
-    <main class="main">
-        <input class="main__input" id="quantidade" type="number" name="quantidade" placeholder="Insira a quantidade de pokemons.">
-        <br>
-        <div class="pokemons">
-        </div>
+    <main class="conteudo">
+        <input class="conteudo__entrada" id="quantidade" type="number" placeholder="Quantos pokémons deseja ver?">
+        <div id="carregando" class="carregando">Carregando...</div>
+        <div class="lista-pokemons"></div>
     </main>
-
     <script src="script.js"></script>
 </body>
 

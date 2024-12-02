@@ -1,70 +1,91 @@
-*{
+/* Estilos básicos */
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
 body {
-    background-color: #00ffff;
     font-family: "Press Start 2P", sans-serif;
+    background-color: #00ffff;
 }
 
+/* Cabeçalho */
 .cabecalho {
     background-color: #ffffff;
-    margin: 1.25rem auto;
-    max-width: 1100px;
-    padding: 30px 2%;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+    max-width: 800px;
 }
 
 .cabecalho__titulo {
     color: #ef5350;
-    font-size: 2.75rem;
+    font-size: 2rem;
+}
+
+/* Conteúdo principal */
+.conteudo {
+    background-color: #ffffff;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px;
     text-align: center;
 }
 
-.main {
-    background-color: #ffffff;
-    margin: 1.25rem auto;
-    max-width: 1100px;
-    padding: 30px 2%;
-}
-
-.main__input {
-    height: 2.5rem;
-    padding-left: 0.625rem;
+.conteudo__entrada {
     width: 100%;
+    height: 2.5rem;
+    padding: 5px;
+    border: 2px solid #ef5350;
+    border-radius: 5px;
+    margin-bottom: 10px;
 }
 
-.pokemons {
+.carregando {
+    display: none;
+    font-size: 1rem;
+    color: #000;
+    margin: 10px 0;
+}
+
+/* Lista de Pokémons */
+.lista-pokemons {
     display: flex;
     flex-wrap: wrap;
-    margin: 1.25rem 0;
+    justify-content: center;
+    gap: 10px;
 }
 
-.pokemons__pokemon {
+.cartao-pokemon {
     background-color: #e6e6e6;
     border-radius: 10px;
-    margin: 1.25rem 2%;
-    width: 29%;
-}
-
-.pokemons__pokemon img {
-    width: 100%;
-}
-
-.pokemons__pokemon p {
-    color: #000000;
-    font-size: 1.25rem;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%;
     text-align: center;
-    padding: 0.625rem 0;
+    padding: 10px;
+    transition: transform 0.3s;
 }
 
+.cartao-pokemon:hover {
+    transform: scale(1.05);
+}
+
+.cartao-pokemon img {
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+
+.cartao-pokemon p {
+    font-size: 1rem;
+    color: #000;
+    text-transform: capitalize;
+}
+
+/* Responsividade */
 @media screen and (max-width: 768px) {
-    .pokemons__pokemon {
-        text-align: center;
-        width: 100%;
-    }
-    .pokemons__pokemon img {
-        max-width: 300px;
+    .cartao-pokemon {
+        width: 90%;
     }
 }
